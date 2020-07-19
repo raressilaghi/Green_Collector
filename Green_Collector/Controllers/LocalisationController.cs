@@ -273,7 +273,7 @@ namespace Green_Collector.Controllers
         {
             using (var clt = new WebClient())
             {
-                string uri = "https://maps.googleapis.com/maps/api/geocode/json?address=" + loc + "&key=AIzaSyBmTYYiX7hNaEeA5nH-CicO5Jo-yUCt6JM";
+                string uri = "https://maps.googleapis.com/maps/api/geocode/json?address=" + loc + "&key=AIzaSyBm90sjnsiX7hNaEeA5nH-CicO5Jo-yUCt6JM";
 
                 string geocodeInfo = clt.DownloadString(uri);
                 JavaScriptSerializer oJS = new JavaScriptSerializer();
