@@ -1,0 +1,9 @@
+C:\Users\HP\source\repos\Green_Collector\DataLibrary\bin\Debug\DataLibrary.dll
+C:\Users\HP\source\repos\Green_Collector\DataLibrary\bin\Debug\DataLibrary.pdb
+C:\Users\HP\source\repos\Green_Collector\DataLibrary\bin\Debug\Dapper.dll
+C:\Users\HP\source\repos\Green_Collector\DataLibrary\bin\Debug\Dapper.xml
+C:\Users\HP\source\repos\Green_Collector\DataLibrary\obj\Debug\DataLibrary.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\Green_Collector\DataLibrary\obj\Debug\DataLibrary.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\Green_Collector\DataLibrary\obj\Debug\DataLibrary.csproj.CopyComplete
+C:\Users\HP\source\repos\Green_Collector\DataLibrary\obj\Debug\DataLibrary.dll
+C:\Users\HP\source\repos\Green_Collector\DataLibrary\obj\Debug\DataLibrary.pdb

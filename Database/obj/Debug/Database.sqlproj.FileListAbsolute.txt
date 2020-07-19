@@ -1,0 +1,6 @@
+C:\Users\HP\source\repos\Green_Collector\Database\bin\Debug\Database.dacpac
+C:\Users\HP\source\repos\Green_Collector\Database\bin\Debug\Database.dll
+C:\Users\HP\source\repos\Green_Collector\Database\bin\Debug\Database.pdb
+C:\Users\HP\source\repos\Green_Collector\Database\obj\Debug\Database.sqlprojAssemblyReference.cache
+C:\Users\HP\source\repos\Green_Collector\Database\obj\Debug\Database.dll
+C:\Users\HP\source\repos\Green_Collector\Database\obj\Debug\Database.pdb

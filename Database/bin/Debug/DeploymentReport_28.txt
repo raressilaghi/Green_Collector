@@ -1,0 +1,21 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Customer].[IdOrder] is being dropped, data loss could occur.
+
+** User actions
+     Alter
+       [dbo].[Comanda] (Table)
+       [dbo].[Customer] (Table)
+     Create
+       [dbo].[FK_Comanda_Customer] (Foreign Key)
+
+** Supporting actions
+
+The column [dbo].[Customer].[IdOrder] is being dropped, data loss could occur.
+

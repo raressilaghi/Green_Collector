@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Green_Collector.Models.ViewModels.ViewStatus>
+
+@{
+    ViewBag.Title = "OrderStatus";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="titluri_sectiuni">Nu uita să scoți deșeurile din casă !</h2>
+
+
+@foreach (var item in Model)
+{
+    <div id="status_comanda">
+        <p>Anunțul tău pentru @Html.DisplayFor(modelItem => item.Waste) @Html.DisplayFor(modelItem => item.Quantity) kg, plasat în data de @Html.DisplayFor(modelItem => item.Data) va fi colectat în @ViewBag.Message zile de la adresa: @Html.DisplayFor(modelItem => item.Address). </p>
+    </div>
+}
+  

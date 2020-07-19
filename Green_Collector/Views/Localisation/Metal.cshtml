@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewBag.Title = "Metal";
+    Layout = "~/Views/Shared/_LayoutMetal.cshtml";
+}
+
+
+
+
+<h2 class="titluri_sectiuni">METAL</h2>
+<br />
+<div class="info_harta">
+    <div class="info_harta_titlu">
+        <img src="~/Icon/TruckMetal.png" width="300" height="200" />
+        <h3>@ViewBag.Message</h3>
+    </div>
+    <p>* Maracjele de pe hartă indică locațiile de unde trebuie colectate deșeurile aferente anunțurilor plasate săptămâna aceasta, pâna în acest moment. </p>
+    <p>* Pentru mai multe detalii despre adrese treceți cu cursorul peste marcaje.<p />
+    <p>* Pentru a vizualiza ruta dintre 2 locații, selectați locațiile dorite din listele derulante.<p />
+</div>
+<div class="row">
+    <div id="floating-panel">
+        <b>Start: </b>
+        <select id="start">
+            @foreach (var item in ViewBag.ListOfDropdown)
+            {
+                <option value="@item.Address">@item.Address</option>
+            }
+
+        </select>
+        <b>End: </b>
+        <select id="end">
+            @foreach (var item in ViewBag.ListOfDropdown)
+            {
+                <option value="@item.Address">@item.Address</option>
+            }
+        </select>
+    </div>
+    <div id="map"></div>
+    <script>
+        var map;
+
+        function initMap() {
+            var directionsService = new google.maps.DirectionsService();
+            var directionsRenderer = new google.maps.DirectionsRenderer();
+          map = new google.maps.Map(document.getElementById('map'), {
+
+              center: { lat: 47.660710, lng: 23.566260},
+          zoom: 13
+          });
+            directionsRenderer.setMap(map);
+          $.get("@Url.Action("GetAllLocation", "Localisation")", function (data, status) {
+              var marker = [];
+              var contentString = [];
+              var infowindow = [];
+              for (var i = 0; i < data.length; i++) {
+                  if (data[i].TypeId == 2) {
+                      var icon = "../Icon/markerM.png";
+                      marker[i] = new google.maps.Marker({ position: { lat: data[i].Latitude, lng: data[i].Longitude }, map: map, icon: icon });
+                      contentString[i] = '<div id="content">' +
+                          '<div id="siteNotice">' +
+                          '</div>' +
+                          '<h1 id="firstHeading" class="firstHeading">' + data[i].Address + '</h1>' +
+                          '<div id="bodyContent">' +
+                          '<p><b>Tip Deseu: Metal</b>, Cantitate:, ' + data[i].Quantity + ' </p>';
+                      infowindow[i] = new google.maps.InfoWindow({
+                          content: contentString[i]
+                      });
+                      var markerValue = marker[i];
+                      google.maps.event.addListener(marker[i], 'mouseover', (function (markerValue, i) {
+                          return function () {
+                              infowindow[i].open(map, marker[i]);
+                          }
+                      })(marker[i], i));
+                      google.maps.event.addListener(marker[i], 'mouseout', (function (markerValue, i) {
+                          return function () {
+                              infowindow[i].close();
+                          }
+                      })(marker[i], i));
+                  }
+                  /*marker.addListener('mouseover', function () {
+                      infowindow.open(map, marker);
+                  });
+                  marker.addListener('mouseout', function () {
+                      infowindow.open();
+                  });*/
+              }
+
+          })
+            var onChangeHandler = function () {
+                calculateAndDisplayRoute(directionsService, directionsRenderer);
+            };
+            document.getElementById('start').addEventListener('change', onChangeHandler);
+            document.getElementById('end').addEventListener('change', onChangeHandler);
+        }
+        function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+            directionsService.route(
+                {
+                    origin: { query: document.getElementById('start').value },
+                    destination: { query: document.getElementById('end').value },
+                    travelMode: 'DRIVING'
+                },
+                function (response, status) {
+                    if (status === 'OK') {
+                        directionsRenderer.setDirections(response);
+                    } else {
+                        window.alert('Directions request failed due to ' + status);
+                    }
+                });
+        }
+    </script>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmTYYiX7hNaEeA5nH-CicO5Jo-yUCt6JM&callback=initMap"
+            type="text/javascript"></script>
+</div>
+

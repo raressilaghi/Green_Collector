@@ -1,0 +1,111 @@
+﻿@model Green_Collector.ViewModels.OrderWasteViewModel
+
+@{
+    ViewBag.Title = "NewOrder";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="titluri_sectiuni">Anunț Nou</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form_horizontal">
+    <div class="form_titlu">
+    <h4>Formular Plasare Anunțuri</h4>
+        </div>
+    <hr />
+    <div id="asd">
+        <p>Completați câmpurile cu datele dumneavoastră: </p>
+        <p>Selectați categoriile de deșeuri colectate și introduceți cantitatea: </p>
+    </div>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+ <div class="form_comanda">
+     <div>
+         
+        <div class="form_group">
+        <div>
+        @Html.LabelFor(model => model.Town, htmlAttributes: new { @class = "control_label" })
+        </div>
+        <div class="col-md-10">
+           <p id="bm">Baia Mare</p>
+        </div>
+        </div>
+
+        <div class="form_group">
+        <div>
+            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control_label" })
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form_control" } })
+                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form_group">
+            <div>
+            @Html.LabelFor(model => model.Number, htmlAttributes: new { @class = "control_label" })
+                </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Number, new { htmlAttributes = new { @class = "form_control" } })
+                @Html.ValidationMessageFor(model => model.Number, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form_group">
+            <div>
+            @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control_label" })
+                </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form_control" } })
+                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        </div>
+     <div class="formular_deseuri">
+         
+         <table class="form-group_table">
+             @for (int i = 0; i < 4; i++)
+             {
+                 <tr >
+
+                     <td >
+                         @Html.HiddenFor(x => Model.WasteTypes[i].Id)
+                         <p class="control_label"> @Html.DisplayFor(it => Model.WasteTypes[i].Title) </p>
+                     </td>
+                     <td >
+                         <p class="t4">@Html.CheckBoxFor(it => Model.WasteTypes[i].IsChecked)</p>
+                     </td>
+                     <td >
+                         <p class="form_control">
+                             @Html.EditorFor(it => Model.WasteTypes[i].Quantity)
+                         </p>
+                         @Html.ValidationMessageFor(it => Model.WasteTypes[i].Quantity)
+                     </td>
+                     <td >
+                         <p class="t2">
+                             @Html.LabelFor(it => Model.WasteTypes[i].Quantity)
+                         </p>
+                     </td>
+
+                 </tr>
+
+             }
+         </table>
+     </div>
+    </div>
+    <div class="buton_form">
+        
+                <input type="submit" value="Trimite anunț" class="btn btn-default" />
+           
+    </div>
+</div>
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

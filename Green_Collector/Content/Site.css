@@ -1,0 +1,436 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url('../Icon/fundal1.png');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Comic Sans MS;
+    font-size: 16px;
+}
+
+#div_jumbtron {
+    background-color: #77ce77;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    /*background: white;*/
+}
+footer p{
+    visibility:hidden;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+    background-color: white;
+    
+}
+
+.col-md-10{
+    margin-bottom:10px;
+}
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    
+}
+
+.titluri_sectiuni {
+    text-align: center;
+    margin-bottom: 50px;
+    color: white;
+    -webkit-text-stroke: 2px black;
+    font-size:40px;
+}
+
+#sec1_about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#citat {
+    /*border: 2px solid red;*/
+    border-radius: 70px 20px;
+    width: 70%;
+    margin: 20px 0px 20px 0px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    font-family: Lucida Console;
+    background-color: #77ce77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 30px 30px 30px;
+}
+.black {
+    color: gray;
+}
+
+#lista_curiozitati {
+    list-style-image: url('../Icon/pointer.png');
+}
+#curiozitati {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    /*border: 2px solid blue;*/
+    background-color: #77ce77;
+    padding: 30px 30px 30px 30px;
+    border-radius: 60px;
+}
+#ghid_colectare {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    /*border: 2px solid yellow;*/
+    flex-wrap: wrap;
+    width: 100%;
+    background-color:  white;
+    padding: 30px 30px 30px 30px;
+    border-radius: 60px;
+}
+#deseuri_about {
+    /*border: 2px solid pink;*/
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 20px;
+}
+#img_ghid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#titlu_ghid{
+    text-align:center;
+    font-weight: bold;
+
+}
+#r{
+    color: #C63918;
+    font-size: 24px;
+}
+#g {
+    color: #F2C849;
+    font-size: 24px;
+}
+#a {
+    color: #3779AF;
+    font-size: 24px;
+}
+#v {
+    color: #358912;
+    font-size: 24px;
+}
+
+#map {
+    height: 600px;
+    padding: 50px;
+    border-style: solid;
+    border-color: #BCB6A8;
+    border-width: 10px;
+    width: 100%;
+}
+
+#floating-panel {
+    position: absolute;
+    left: 30%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+    margin-top:18px;
+}
+
+.info_harta {
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-image: url('../Icon/info_harta1.jpg');
+    border-style: solid;
+    border-color: #BCB6A8;
+    border-width: 10px;
+}
+.info_harta p{
+    font-size:18px;   
+}
+
+
+.info_harta_titlu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.info_harta_titlu img{
+    margin-right:20px;
+}
+
+.form_horizontal {
+    background-color: #77ce77;
+    border:double 20px #5b3535;
+}
+
+
+.t1 {
+    
+    margin-right:10px;
+}
+
+.t2 {
+    
+    margin-left: 10px;
+}
+
+
+
+.t4 {
+    
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.form_titlu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.form_titlu h4{
+    font-weight:bold;
+    margin-top:20px;
+}
+
+.form_comanda {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px 0px;
+    padding-right:80px;
+}
+
+.formular_deseuri {
+    margin-left:100px;
+}
+
+.form_group {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 5px 0px;
+    padding-top:5px;
+}
+
+.control_label {
+   
+    width: 150px;
+    text-align: right;
+    line-height: 2;
+    font-family: Comic Sans MS;
+    font-weight:bold;
+}
+
+#bm{
+    padding-top:5px;
+    font-weight:bold;
+}
+
+.form_control {
+    background-color:white;
+    border-radius: 4px;
+    border:1px solid #ccc;
+    padding:5px 3px;
+}
+
+.form_comanda input{
+    border:0px;
+}
+
+#asd{
+    display:flex;
+    justify-content:space-between;
+    flex-direction:row;
+    padding-left:50px;
+    padding-right:50px;
+}
+
+
+.buton_form{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    
+}
+
+.buton_form input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    border: 5px solid #ddd;
+}
+
+.div_tb{
+    background-color:white;
+}
+
+    .div_tb h3 {
+        text-align: center;
+    }
+
+    .div_tb dt, .div_tb dd {
+        padding-bottom: 20px;
+    }
+
+    #confirm_comanda {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 700px;
+    }
+
+#status_comanda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+    #status_comanda p, #confirm_comanda p {
+        background-color: white;
+        padding: 50px;
+        border-radius: 50%;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        border: solid 5px;
+    }
+
+.form_clienti {
+    background-color: #77ce77;
+    border: double 20px #5b3535;
+    height: 600px;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 200px;
+}
+
+#form_cl {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+}
+
+.formc_titlu{
+    padding-left: 100px;
+}
+
+.formc_titlu h3{
+    font-weight:bold;
+}
+
+.formc_buton {
+  padding-left: 50px;
+}
+
+.form_deseuri {
+    background-color: #77ce77;
+    border: double 20px #5b3535;
+    height: 300px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 100px;
+}
+
+.formd_titlu {
+    padding-left: 80px;
+    margin-bottom:30px;
+}
+
+.form_inreg {
+    background-color: #77ce77;
+    border: double 20px #5b3535;
+    height: 700px;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 200px;
+}
+
+.form_log {
+    background-color: white;
+    border: double 20px #5b3535;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    padding-left:150px;
+}
+
+#loginForm h4{
+    padding-left:170px;
+    font-weight:bold;
+}
+
+#gestiune {
+    background-color: white;
+    border: double 10px #5b3535;
+    height: 150px;
+    width: 40%;
+    padding-left: 50px;
+    
+}
+
+#registerError {
+    background-color: white;
+    border: double 10px #5b3535;
+    padding:50px;
+
+}
+
+.titlu_alb {
+    color: white;
+    -webkit-text-stroke: 2px black;
+}
+
+#logo{
+    margin-right:30px;
+}

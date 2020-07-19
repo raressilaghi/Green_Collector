@@ -1,0 +1,22 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Order]
+       [dbo].[Waste]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Order].[Data] is being dropped, data loss could occur.
+
+** User actions
+     Table rebuild
+       [dbo].[Order] (Table)
+       [dbo].[Waste] (Table)
+     Create
+       [dbo].[WasteOrder] (Table)
+
+** Supporting actions
+
+The column [dbo].[Order].[Data] is being dropped, data loss could occur.
+

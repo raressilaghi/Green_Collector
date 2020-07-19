@@ -1,0 +1,31 @@
+﻿
+@{
+    if (this.User.IsInRole("PaperCollector"))
+    {
+        Layout = "~/Views/Shared/_LayoutPaper.cshtml";
+    }
+    else
+            if (this.User.IsInRole("MetalCollector"))
+    {
+        Layout = "~/Views/Shared/_LayoutMetal.cshtml";
+    }
+    else
+                if (this.User.IsInRole("PlasticCollector"))
+    {
+        Layout = "~/Views/Shared/_LayoutPlastic.cshtml";
+    }
+    else
+                     if (this.User.IsInRole("GlassCollector"))
+    {
+        Layout = "~/Views/Shared/_LayoutGlass.cshtml";
+    }
+    else
+                        if (this.User.IsInRole("Admin"))
+    {
+        Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
